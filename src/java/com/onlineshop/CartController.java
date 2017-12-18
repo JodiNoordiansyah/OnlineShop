@@ -31,16 +31,13 @@ public class CartController {
 
     @RequestMapping(value = "/add/{id}")
     public String addCart(@PathVariable Integer id, Model model, HttpSession session) {
-        try {
+       
             Product prod = ps.findById(id);
             cart.getCarts().put(key++, prod);
             int count = cart.getCarts().size();
             model.addAttribute("carts", count);
             session.setAttribute("cart", cart);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         return "redirect:/product";
     }
 
@@ -53,13 +50,9 @@ public class CartController {
     @RequestMapping(value = "/{id}/{value}")
     public String removeCart(@PathVariable Integer id, @PathVariable Integer value, Model model, HttpSession session) {
 
-        try {
+
             Product prod = ps.findById(id);
-            if (prod == null) {
-                model.addAttribute("errMsg", "Belom ada barang yg dipilih");
-                return "product";
-            }
-            
+                      
             cart.getCarts().remove(value, prod);
 
             int count = cart.getCarts().size();
@@ -67,9 +60,7 @@ public class CartController {
             model.addAttribute("carts", count);
             session.setAttribute("cart", cart);
             session.setMaxInactiveInterval(30);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    
         return "carts";
     }
 }
