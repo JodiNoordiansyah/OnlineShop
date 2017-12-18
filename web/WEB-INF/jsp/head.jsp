@@ -15,10 +15,8 @@
                 <c:if test="${not empty sessionScope.user}">
                    
      
-                    <li><a href="#">Cart ${carts}</a></li>
-                  
-                 
-                     
+                    <li><a  href="${pageContext.request.contextPath}/cart/show">Cart ${cart.carts.size()}</a></li>                  
+                                     
                     <li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
                     
                     </c:if>  

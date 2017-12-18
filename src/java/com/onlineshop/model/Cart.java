@@ -15,27 +15,28 @@ import java.util.Map;
  */
 public class Cart {
 
-    private Map<Integer, List<Product>> cartItems = new HashMap<>();
+    private Map<Integer, Product> cartItems ;
 
     public Cart() {
+        cartItems = new HashMap<>();
     }
+
+    public Cart(Map<Integer, Product> cartItems) {
+        this.cartItems = cartItems;
+    }
+    
 
     /**
      * @return the cartItems
      */
-    public Map<Integer, List<Product>> getCartItems() {
+    public Map<Integer, Product> getCartItems() {
         return cartItems;
     }
 
     /**
      * @param cartItems the cartItems to set
      */
-    public void setCartItems(Map<Integer, List<Product>> cartItems) {
+    public void setCartItems(Map<Integer, Product> cartItems) {
         this.cartItems = cartItems;
     }
-
-    /**
-     * @return the cartItems
-     */
-
 }

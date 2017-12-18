@@ -50,21 +50,5 @@ public class ProductController {
 //        model.addAttribute("chart", quantity);
 //        return "product";
 //    }
-    @RequestMapping(value = "/cart")
-    public String addSomething(HttpServletRequest request) {
-        HttpSession session = request.getSession();
-
-        Cart cart = (Cart) session.getAttribute("carts");
-
-        if (cart == null) {
-            cart = new Cart();
-        }
-        List<Product> products = ps.findAllProduct();
-        for (Product product : products) {
-            cart.getCartItems().put(product.getId(), products);
-        }
-
-        session.setAttribute("carts", cart.getCartItems().values());
-        return "product";
-    }
+    
 }

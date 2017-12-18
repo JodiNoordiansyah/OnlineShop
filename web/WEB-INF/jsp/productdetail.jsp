@@ -19,6 +19,7 @@
         <div class="container">
 
             <table border="1">
+                
                 <tr>
                     <td>
 
@@ -28,7 +29,7 @@
                         Harga: ${products.harga}<br/>
                         Stok: ${products.quantity}<br/>
                         <c:if test="${not empty sessionScope.user}">
-                            <a href="${pageContext.request.contextPath}/cart"> add to chart</a>
+                            <a href="${pageContext.request.contextPath}/cart/add/${products.id}"> add to chart</a>
                         </c:if>
 
                     </td>
