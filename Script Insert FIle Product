@@ -1,0 +1,49 @@
+INSERT INTO APP.PRODUCT (deskripsi, harga, image, namaProduct,quantity)
+VALUES ('Jaket Hoodie Fleece
+Ready Stock, Langsung Kirim !!
+
+Spesifikasi =
+Bahan : Fleece
+Puring Topi : Fleece 
+Logo : -
+Ready warna : Hitam, abu muda, abu tua, biru navi, merah, maroon
+', 90000, 'jaketpolos.jpg','Jaket Hoodie',4);
+
+
+INSERT INTO APP.PRODUCT (deskripsi, harga, image, namaProduct,quantity)
+VALUES ('Jaket Pilot Bomber ini terbuat ari Bahan taslan waterpoof dgn lapis dakron. 
+Jaket ini memiliki model casual yang sangat simple sehingga akan membuat anda nyaman
+Tersedia size L dan XL untuk uk standar indonesia.
+
+', 210000, 'jaketbomber.jpg','Jaket Bomber',5);
+
+INSERT INTO APP.PRODUCT (deskripsi, harga, image, namaProduct,quantity)
+VALUES ('Jaket Anime Black Assassins Creed
+Rp.210.000
+Bahan : Fleece + Sablon Rubber
+.
+', 145000, 'jaketassasin.jpg','Assasin Creed',3);
+
+
+INSERT INTO APP.PRODUCT (deskripsi, harga, image, namaProduct,quantity)
+VALUES ('SIZE 25X30X10 CM. BAHAN PU
+', 145000, 'tasfashion59.jpg','TAS FASHION KOREA',100);
+
+
+INSERT INTO APP.PRODUCT (deskripsi, harga, image, namaProduct,quantity)
+VALUES ('Tas Batam Branded Online, Spesifikasi Tas Vb Terbaru Harga Murah :
+Victorya Beckham Olympia. 06BV672 .
+Ukrn Bag 31×23 cm.
+Mini bag 20×14 cm.
+Pouch 20×11 cm.
+Cosmetic pouch 21×11 / 18×10 / 15×8 cm.
+Berat 1.368 kg .
+Kwalitas Semipremium.
+– Harga GROSIR :275000 (BELI MINIMAL 1 SERI)
+
+', 275000, 'tasgrosirbatam.jpg','TAS Grosir Batam',30);
+
+INSERT INTO APP.PRODUCT (deskripsi, harga, image, namaProduct,quantity)
+VALUES ('Tas ransel ini hadir dengan desain retro yang tentunya masih begitu menarik untuk dikenakan pada masa kini. 
+Menggunakan tas ini, membuat Anda tak tertinggal dalam dunia fashion tas
+', 132000',wenjietasransel.jpg','Wenjie Tas Ransel',10);
