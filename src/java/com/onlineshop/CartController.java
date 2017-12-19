@@ -60,22 +60,26 @@ public class CartController {
         }
         totalHargaDalamChart = total;
         model.addAttribute("carts", total);
+        
         return "carts";
     }
 
     @RequestMapping(value = "/{id}/{value}")
-    public String removeCart(@PathVariable Integer id, @PathVariable Integer value, HttpSession totalHarga, Model model) {
+    public String removeCart(@PathVariable Integer id, @PathVariable Integer value, Model model) {
 
-    
-            Product prod = ps.findById(id);
+        Product prod = ps.findById(id);
 
-            Double tot;
-            totalHargaDalamChart = totalHargaDalamChart - prod.getHarga();
-            cart.getCarts().remove(value, prod);
-            int count = cart.getCarts().size();
+        Double tot;
+        totalHargaDalamChart = totalHargaDalamChart - prod.getHarga();
+        cart.getCarts().remove(value, prod);
+        int count = cart.getCarts().size();
 
-            model.addAttribute("carts", totalHargaDalamChart);
+        model.addAttribute("carts", totalHargaDalamChart);
 
-        return "carts";
+        if (totalHargaDalamChart == 0.0) {
+            return "redirect:/product";
+        } else {
+            return "carts";
+        }
     }
 }

@@ -26,9 +26,9 @@
                         <th align="center">Harga</th>
                         <th align="center">Aksi</th>    
                     </tr>    
-                            <c:forEach var="d" items="${cart.carts}">
+                    <c:forEach var="d" items="${cart.carts}">
 
-<tr>
+                        <tr>
                             <td align="center"><image src="<v:url value="/resources/image/${d.value.image}" />"widht="200px" height="200px"/></td>
                             <td align="center">${d.value.namaProduct}</td>
                             <td align="center">${d.value.harga}</td>
@@ -37,14 +37,18 @@
                         </tr>
                     </c:forEach>
                 </table>
-   <h1>TOTAL HARGA : Rp. ${carts}</h1>
-
+                <h1>TOTAL HARGA : Rp. ${carts}</h1>
+                <form action="${pageContext.request.contextPath}/product" method="POST">
+                      <div align="right">
+                        <button name="submitButton" value="Submit" class="btn btn-default">Kembali Belanja</button>
+                        </div>
+                <form>>
             </c:if>
 
 
 
-    </div>
+        </div>
 
 
-</body>
+    </body>
 </html>
