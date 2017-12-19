@@ -37,11 +37,10 @@
                         </tr>
                     </c:forEach>
                 </table>
-
+   <h1>TOTAL HARGA : Rp. ${carts}</h1>
 
             </c:if>
 
-        </td>
 
 
     </div>
